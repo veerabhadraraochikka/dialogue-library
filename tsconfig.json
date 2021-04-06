@@ -6,6 +6,12 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
+    "paths": {
+      "export-dialog": [
+        "dist/export-dialog/export-dialog",
+        "dist/export-dialog"
+      ]
+    },
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",

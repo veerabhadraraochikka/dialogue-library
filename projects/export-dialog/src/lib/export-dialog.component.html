@@ -1,0 +1,295 @@
+<div>
+  <div class="modal-header">
+    <h4 class="modal-title"
+      id="modal-basic-title">Export</h4>
+    <button type="button"
+      class="close"
+      (click)="activeModal.dismiss()"
+      aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form class="login-form"
+      #f="ngForm">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form-group">
+              <label class="text-uppercase">Export Name</label>
+              <input type="text"
+                class="form-control"
+                name="full_name"
+                ngModel />
+            </div>
+            <!-- Default inline 1-->
+
+            <h6 class="secondary-heading mb-3">
+              Filters
+            </h6>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"
+                class="custom-control-input"
+                id="defaultInline1"
+                name="inlineDefaultRadiosExample"
+                mdbInput>
+              <label class="custom-control-label"
+                for="defaultInline1">None</label>
+            </div>
+
+            <!-- Default inline 2-->
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"
+                class="custom-control-input"
+                id="defaultInline2"
+                name="inlineDefaultRadiosExample"
+                mdbInput>
+              <label class="custom-control-label"
+                for="defaultInline2">Currently Applied</label>
+            </div>
+            <!-- Default inline 2-->
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio"
+                class="custom-control-input"
+                id="defaultInline3"
+                name="inlineDefaultRadiosExample"
+                mdbInput>
+              <label class="custom-control-label"
+                for="defaultInline3">Custom</label>
+            </div>
+            <hr>
+            <h6 class="secondary-heading mb-3">
+              Measures
+            </h6>
+            <div class="form-check form-check-inline">
+              <input mdbCheckbox
+                class="form-check-input"
+                type="checkbox"
+                id="dollar"
+                value="option1" />
+              <label class="form-check-label"
+                for="dollar">Dollar</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input mdbCheckbox
+                class="form-check-input"
+                type="checkbox"
+                id="units"
+                value="option2" />
+              <label class="form-check-label"
+                for="units">Units</label>
+            </div>
+            <hr>
+            <h6 class="secondary-heading mb-3">
+              Export Format
+              Excel(.xlsx)
+            </h6>
+          </div>
+          <div class="col-md-3">
+            <h4 class="secondary-heading mb-3">
+              Exported Fields
+            </h4>
+            <hr>
+            <h6 class="secondary-heading mb-3">
+              Date
+            </h6>
+            <!-- Default checkbox -->
+            <div class="form-check">
+              <input mdbCheckbox
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="year" />
+              <label class="form-check-label"
+                for="year">
+                Year
+              </label>
+            </div>
+            <div class="form-check">
+              <input mdbCheckbox
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="month" />
+              <label class="form-check-label"
+                for="month">
+                Month
+              </label>
+            </div>
+            <div class="form-check">
+              <input mdbCheckbox
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="quarter" />
+              <label class="form-check-label"
+                for="month">
+                Quarter
+              </label>
+            </div>
+            <hr>
+            <h6 class="secondary-heading mb-3">
+              Market
+            </h6>
+            <span></span>
+            <div class="form-check">
+              <input mdbCheckbox
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="market" />
+              <label class="form-check-label"
+                for="market">
+                State
+              </label>
+            </div>
+            <hr>
+            <h6 class="secondary-heading mb-3">
+              Product
+            </h6>
+            <div class="form-check">
+              <input mdbCheckbox
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="manufaturers" />
+              <label class="form-check-label"
+                for="manufaturers">
+                Manufaturers
+              </label>
+            </div>
+            <div class="form-check">
+              <input mdbCheckbox
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="productskus" />
+              <label class="form-check-label"
+                for="productskus">
+                Brand/SKUs
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4 class="secondary-heading mb-3">
+              Filters
+            </h4>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="text-uppercase">Class Of Trade</label>
+                  <select name="purpose"
+                    class="form-control"
+                    ngModel>
+                    <option *ngFor="let drp1 of posts.dropdown1">{{drp1.value}}</option>
+                    <!-- <option>Share Market</option>
+                    <option>Mutual Funds</option>
+                    <option>Insurance</option> -->
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="text-uppercase">UNSPC4</label>
+                  <select name="purpose"
+                    class="form-control"
+                    ngModel>
+                    <option *ngFor="let drp1 of posts.dropdown1">{{drp1.value}}</option>
+                    <!-- <option>Share Market</option>
+                    <option>Mutual Funds</option>
+                    <option>Insurance</option> -->
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="text-uppercase">UNSPC1</label>
+                  <select name="purpose"
+                    class="form-control"
+                    ngModel>
+                    <option *ngFor="let drp1 of posts.dropdown1">{{drp1.value}}</option>
+                    <!-- <option>Share Market</option>
+                    <option>Mutual Funds</option>
+                    <option>Insurance</option> -->
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="text-uppercase">Manufacturers</label>
+                  <select name="purpose"
+                    class="form-control"
+                    ngModel>
+                    <option *ngFor="let drp1 of posts.dropdown1">{{drp1.value}}</option>
+                    <!-- <option>Share Market</option>
+                    <option>Mutual Funds</option>
+                    <option>Insurance</option> -->
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="text-uppercase">UNSPC2</label>
+                  <select name="purpose"
+                    class="form-control"
+                    ngModel>
+                    <option *ngFor="let drp1 of posts.dropdown1">{{drp1.value}}</option>
+                    <!-- <option>Share Market</option>
+                    <option>Mutual Funds</option>
+                    <option>Insurance</option> -->
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="text-uppercase">SKUs</label>
+                  <select name="purpose"
+                    class="form-control"
+                    ngModel>
+                    <option *ngFor="let drp1 of posts.dropdown1">{{drp1.value}}</option>
+                    <!-- <option>Share Market</option>
+                    <option>Mutual Funds</option>
+                    <option>Insurance</option> -->
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="text-uppercase">UNSPC3</label>
+                  <select name="purpose"
+                    class="form-control"
+                    ngModel>
+                    <option *ngFor="let drp1 of posts.dropdown1">{{drp1.value}}</option>
+                    <!-- <option>Share Market</option>
+                    <option>Mutual Funds</option>
+                    <option>Insurance</option> -->
+                  </select>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button"
+      (click)="activeModal.close(f)"
+      class="btn btn-outline-dark">
+      Save
+    </button>
+  </div>
+</div>

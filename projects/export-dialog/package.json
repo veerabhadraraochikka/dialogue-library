@@ -1,0 +1,17 @@
+{
+  "name": "sample-export-dialog",
+  "version": "0.1.9",
+  "peerDependencies": {
+    "@angular/common": "^11.1.2",
+    "@angular/core": "^11.1.2",
+    "@ng-bootstrap/ng-bootstrap": "^9.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veerabhadraraochikka/dialogue-library.git"
+  },
+  "author": "Veerabhadra Rao Chikka",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

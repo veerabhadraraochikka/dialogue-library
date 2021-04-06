@@ -6,9 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "pack": "ng build --project=export-dialog --prod && cd dist/export-dialog && npm publish"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~11.1.2",
     "@angular/common": "~11.1.2",
@@ -18,11 +19,14 @@
     "@angular/platform-browser": "~11.1.2",
     "@angular/platform-browser-dynamic": "~11.1.2",
     "@angular/router": "~11.1.2",
+    "@ng-bootstrap/ng-bootstrap": "^9.1.0",
+    "bootstrap": "^4.6.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1101.4",
     "@angular/cli": "~11.1.4",
     "@angular/compiler-cli": "~11.1.2",
     "@types/jasmine": "~3.6.0",
@@ -35,6 +39,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

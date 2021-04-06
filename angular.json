@@ -1,7 +1,54 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "export-dialog": {
+      "projectType": "library",
+      "root": "projects/export-dialog",
+      "sourceRoot": "projects/export-dialog/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/export-dialog/tsconfig.lib.json",
+            "project": "projects/export-dialog/ng-package.json"
+          },
+          "styles": [
+            "node_modules/bootstrap/dist/css/bootstrap.min.css"
+          ],
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/export-dialog/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/export-dialog/src/test.ts",
+            "tsConfig": "projects/export-dialog/tsconfig.spec.json",
+            "karmaConfig": "projects/export-dialog/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/export-dialog/tsconfig.lib.json",
+              "projects/export-dialog/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "export-dialog"
 }
